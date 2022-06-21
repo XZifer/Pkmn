@@ -29,10 +29,10 @@ namespace Pkmn.Logica.Clases
         public string IdentificarPkmn(Pokemon p)
         {
             return p.Nombre + "\n" +
-                            "Un pokemon de Tipo:" + p.TipoPokemon + "\n" +
-                            "Peso:" + p.Peso + "kilos\n" +
-                            "Altura:" + p.Altura + "metros\n" +
-                            "Descripcion:" + p.Descripcion; ;
+                   "Un pokemon de Tipo:" + p.TipoPokemon + "\n" +
+                   "Peso:" + p.Peso + "kilos\n" +
+                   "Altura:" + p.Altura + "metros\n" +
+                   "Descripcion:" + p.Descripcion; 
         }
     }
 }
