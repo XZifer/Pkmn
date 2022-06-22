@@ -1,4 +1,5 @@
-﻿using Pkmn.Modelos.Clases;
+﻿using Pkmn.Datos;
+using Pkmn.Modelos.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Pkmn.Logica.Clases
     public class Pokebola
     {
         public Pokemon? pokemonDentroPokebola { get; set; }
+
         public bool EsOcupada()
         {
             if (pokemonDentroPokebola == null)

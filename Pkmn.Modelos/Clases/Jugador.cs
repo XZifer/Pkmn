@@ -15,6 +15,6 @@ namespace Pkmn.Modelos.Clases
         public string Pasword { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public Pokemon[] Pkdex { get; set; }
-        public Pokebola[] BolsaPokebolas { get; set; }
+        public Pokemon[] Pokebolas { get; set; }
     }
 }
