@@ -19,36 +19,37 @@ namespace Pkmn.Aplicacion
 
         private static void RegistraUsuario()
         {
-            //*Jugador jugador = new Jugador();
-            //Console.WriteLine("Escribe tu Nombre:");
-            //jugador.Usuario = Console.ReadLine();
-            //while (jugador.Edad == 0)
-            //{
-            //    ElegirEdad(jugador);
-            //}
-            //Console.WriteLine("Escribe una contraseña: ");
-            //jugador.Pasword = Console.ReadLine();
-            //while (jugador.Sexo == null)
-            //{
-            //    ElegirSexo(jugador);
-            //*}
+            Jugador jugador = new Jugador();
+            Console.WriteLine("Escribe tu Nombre:");
+            jugador.Usuario = Console.ReadLine();
+            while (jugador.Edad == 0)
+            {
+                ElegirEdad(jugador);
+            }
+            Console.WriteLine("Escribe una contraseña: ");
+            jugador.Pasword = Console.ReadLine();
+            while (jugador.Sexo == null)
+            {
+                ElegirSexo(jugador);
+            }
             Pokedex pokedexNuevo = new Pokedex();
-            //*jugador.Pokedex = pokedexNuevo;
+            jugador.Pokedex = pokedexNuevo;
            
         }
 
         private static void SeleccionaPkmn()
         {
             // Pedir que seleccione un pokemon
-
             Pokemones pokemonesiniciales = new Pokemones();
             Console.WriteLine("Elije uno de nuestros pokemones iniciales:");
 
             // Mostrar la lista de los nombres de pokemones disponibles de inicio
-            // (Bien podria haberlo puesto con un Console.WriteLine("S-Squirtle\n" + "B-Bulbasaur\n" + "C-Charmander\n")            
             MostrarPokemon(pokemonesiniciales);
-            string YoTeElijo = Console.ReadLine();
+            // (Bien podria haberlo puesto con un Console.WriteLine("S-Squirtle\n" + "B-Bulbasaur\n" + "C-Charmander\n")            
+
             // Pedir que se ingrese (S-Squitle, C-Charmander, B-Bulbasaur) del pokemon que quiere seleccionar
+            string YoTeElijo = Console.ReadLine();
+
             // Obtener el Pokemon pokemonSeleccionado = ???? Pokemones.ObtenPkmnPorNombre(nombre)
             if (YoTeElijo.ToUpper() != "S"
                 && YoTeElijo.ToUpper() != "B"
@@ -70,6 +71,23 @@ namespace Pkmn.Aplicacion
             }
            
             Console.WriteLine("{0} Yo te elijo!!!", YoTeElijo);
+            // Crear instancia de pokebola
+            Pokebola pokeball = new Pokebola(); 
+            // Meter el pokemon a la pokebola
+            // Agregar la pokebola a la lista de pokebolas del jugador
+
+            // Crear 2 instancia de pokebolas sin pokemonDentroDePokebola
+            // Agregar a la lista de pokebolas del jugador las 2 pokebolas vacias
+
+            //Validar si el jugador tiene pokebolas en la lista de pokebolas
+            //Si tiene, buscar una pokebola que tenga pokemon pokebola.EsOcupada 
+
+            //Con el Pokedex obtener la ficha e imprimirla en pantalla
+
+            //Si hay pokebolas vacias, imprimir en pantalla el numero de pokebolas vacias
+
+            //string ficha = jugador.Pokedex.ObtenerFicha("Bulbasaur");
+            //Console.WriteLine(ficha);
         }
 
         private static string PkmnElegido(string YoTeElijo)
@@ -116,23 +134,6 @@ namespace Pkmn.Aplicacion
                 }
             }
         }
-
-        // Crear instancia de pokebola
-        // Meter el pokemon a la pokebola
-        // Agregar la pokebola a la lista de pokebolas del jugador
-
-        // Crear 2 instancia de pokebolas sin pokemonDentroDePokebola
-        // Agregar a la lista de pokebolas del jugador las 2 pokebolas vacias
-
-        //Validar si el jugador tiene pokebolas en la lista de pokebolas
-        //Si tiene, buscar una pokebola que tenga pokemon pokebola.EsOcupada 
-
-        //Con el Pokedex obtener la ficha e imprimirla en pantalla
-
-        //Si hay pokebolas vacias, imprimir en pantalla el numero de pokebolas vacias
-
-        //string ficha = jugador.Pokedex.ObtenerFicha("Bulbasaur");
-        //Console.WriteLine(ficha);
 
         private static void ElegirEdad(Jugador jugador)
         {
