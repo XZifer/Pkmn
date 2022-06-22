@@ -13,7 +13,13 @@ namespace Pkmn.Aplicacion
             //Registra usuario
             RegistraUsuario();
             //Selecciona pokemons
+            ElegirPkmnInicial();
             //Crea Jugador
+        }
+
+        private static void ElegirPkmnInicial()
+        {
+            throw new NotImplementedException();
         }
 
         private static void RegistraUsuario()
@@ -21,13 +27,15 @@ namespace Pkmn.Aplicacion
             Jugador jugador = new Jugador();
             Console.WriteLine("Escribe tu Nombre:");
             jugador.Usuario = Console.ReadLine();
-            while (jugador.Sexo == null)
-            {
-                ElegirSexo(jugador);
-            }
             while (jugador.Edad == 0)
             {
                 ElegirEdad(jugador);
+            }
+            Console.WriteLine("Escribe una contraseña: ");
+            jugador.Pasword = Console.ReadLine(); 
+            while (jugador.Sexo == null)
+            {
+                ElegirSexo(jugador);
             }
             Pokedex pokedexNuevo = new Pokedex();
             jugador.Pokedex = pokedexNuevo;
