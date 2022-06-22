@@ -1,20 +1,20 @@
-﻿using Pkmn.Datos;
-using Pkmn.Modelos.Clases;
+﻿using Pkmn.Modelos.Clases;
+using Pkmn.Modelos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pkmn.Logica.Clases
+namespace Pkmn.Datos
 {
-    public class Pokedex
+    public class Pokedex : IPokedex
     {
         public string ObtenerFicha(string nombre)
         {
             Pokemones pokemones = new Pokemones();
             Pokemon[] pokemonesArreglo = pokemones.ObtenerPkmns();
-            string ficha="";
+            string ficha = "";
             for (int i = 0; i < pokemonesArreglo.Length; i++)
             {
                 Pokemon pokemonSeleccionado = pokemonesArreglo[i];
@@ -32,7 +32,7 @@ namespace Pkmn.Logica.Clases
                    "Un pokemon de Tipo:" + p.TipoPokemon + "\n" +
                    "Peso:" + p.Peso + "kilos\n" +
                    "Altura:" + p.Altura + "metros\n" +
-                   "Descripcion:" + p.Descripcion; 
+                   "Descripcion:" + p.Descripcion;
         }
     }
 }

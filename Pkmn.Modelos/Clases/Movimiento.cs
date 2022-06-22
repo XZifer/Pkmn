@@ -9,6 +9,7 @@ namespace Pkmn.Modelos.Clases
 {
     public class Movimiento
     {
+        public string Nombre { get; set; }
         public Tipo Tipo { get; set; }
         public int Potencia { get; set; }
     }

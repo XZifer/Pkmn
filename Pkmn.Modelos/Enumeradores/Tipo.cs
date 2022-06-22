@@ -12,6 +12,7 @@ namespace Pkmn.Modelos.Enumeradores
         Planta,
         Fuego,
         Bicho,
-        Electrico
+        Electrico,
+        Normal
     }
 }

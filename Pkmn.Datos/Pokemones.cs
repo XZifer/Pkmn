@@ -70,6 +70,33 @@ namespace Pkmn.Datos
         public Pokemon[] ObtenerPkmns()
         {
             return ListaPokemones.ToArray();
-        } 
+        }
+        
+        public Pokemon ObtenPkmnPorNombre(string nombre)
+        {
+            Pokemon elegido = null;
+            foreach (Pokemon p in ListaPokemones)
+            {
+                if (p.Nombre == nombre)
+                {
+                    elegido = p;
+                }
+            }
+            return elegido;
+        }
+
+        public List<Pokemon> ObtenPkmnDeInicio()
+        {
+            List<Pokemon> pokemonesInicio = new List<Pokemon>();
+            foreach (Pokemon p in ListaPokemones)
+            {
+                if (p.Nombre == "Squirtle" || p.Nombre == "Bulbasaur" || p.Nombre == "Charmander")
+                {
+                    pokemonesInicio.Add(p);
+                }
+            }
+            return pokemonesInicio;
+        }
+
     }
 }

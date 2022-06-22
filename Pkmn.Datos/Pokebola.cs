@@ -1,14 +1,14 @@
-﻿using Pkmn.Datos;
-using Pkmn.Modelos.Clases;
+﻿using Pkmn.Modelos.Clases;
+using Pkmn.Modelos.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pkmn.Logica.Clases
+namespace Pkmn.Datos
 {
-    public class Pokebola
+    public class Pokebola : IPokebola
     {
         public Pokemon? pokemonDentroPokebola { get; set; }
 
