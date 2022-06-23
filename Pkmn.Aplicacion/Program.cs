@@ -26,7 +26,7 @@ namespace Pkmn.Aplicacion
                 ElegirEdad(jugador);
             }
             Console.WriteLine("Escribe una contraseña: ");
-            jugador.Pasword = Console.ReadLine();
+            jugador.Pasword = Console.ReadLine(); 
             while (jugador.Sexo == null)
             {
                 ElegirSexo(jugador);
@@ -39,24 +39,6 @@ namespace Pkmn.Aplicacion
             Console.WriteLine("Elije uno de nuestros pokemones iniciales:");
 
             // Mostrar la lista de los nombres de pokemones disponibles de inicio
-            Pokemon[] iniciales = pokemonesiniciales.ObtenPkmnDeInicio().ToArray();
-            foreach (Pokemon pkmn in iniciales)
-            {
-                switch (pkmn.Nombre)
-                {
-                    case "Squirtle":
-                        Console.WriteLine("S-" + pkmn.Nombre);
-                        break;
-                    case "Bulbasaur":
-                        Console.WriteLine("B-" + pkmn.Nombre);
-                        break;
-                    case "Charmander":
-                        Console.WriteLine("C-" + pkmn.Nombre);
-                        break;
-                    default:
-                        break;
-                }
-            }
             
             // Pedir que se ingrese (S-Squitle, C-Charmander, B-Bulbasaur) del pokemon que quiere seleccionar
             // Obtener el Pokemon pokemonSeleccionado = ???? Pokemones.ObtenPkmnPorNombre(nombre)
