@@ -13,7 +13,13 @@ namespace Pkmn.Aplicacion
             //Registra usuario
             RegistraUsuario();
             //Selecciona pokemons
+            ElegirPkmnInicial();
             //Crea Jugador
+        }
+
+        private static void ElegirPkmnInicial()
+        {
+            throw new NotImplementedException();
         }
 
         private static void RegistraUsuario()
@@ -34,12 +40,7 @@ namespace Pkmn.Aplicacion
             Pokedex pokedexNuevo = new Pokedex();
             jugador.Pokedex = pokedexNuevo;
             // Pedir que seleccione un pokemon
-
-            Pokemones pokemonesiniciales = new Pokemones();
-            Console.WriteLine("Elije uno de nuestros pokemones iniciales:");
-
             // Mostrar la lista de los nombres de pokemones disponibles de inicio
-            
             // Pedir que se ingrese (S-Squitle, C-Charmander, B-Bulbasaur) del pokemon que quiere seleccionar
             // Obtener el Pokemon pokemonSeleccionado = ???? Pokemones.ObtenPkmnPorNombre(nombre)
             // Crear instancia de pokebola
