@@ -69,14 +69,13 @@ namespace Pkmn.Aplicacion
             {
                 YoTeElijo = PkmnElegido(YoTeElijo);
             }
-            Pokemon miInicial = pokemonesiniciales.ObtenPkmnPorNombre(YoTeElijo);
+           
             Console.WriteLine("{0} Yo te elijo!!!", YoTeElijo);
             // Crear instancia de pokebola
-            Pokebola pokeball = new Pokebola();
+            Pokebola pokeball = new Pokebola(); 
             // Meter el pokemon a la pokebola
-            pokeball.pokemonDentroPokebola = miInicial;
             // Agregar la pokebola a la lista de pokebolas del jugador
-            
+
             // Crear 2 instancia de pokebolas sin pokemonDentroDePokebola
             // Agregar a la lista de pokebolas del jugador las 2 pokebolas vacias
 
